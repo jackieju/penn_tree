@@ -6,7 +6,7 @@ An alternative of nltk.tree
 You can use it to parse output string of stanford sentence structure parser.
 
 API:
-1. parse from a penn string like:
+1. parse from a penn string:
 
 ```
 s = """
