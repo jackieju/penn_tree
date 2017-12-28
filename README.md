@@ -7,6 +7,8 @@ You can use it to parse output string of stanford sentence structure parser.
 
 API:
 1. parse from a penn string like:
+
+```
 s = """
 (ROOT
   (SBAR
@@ -22,22 +24,30 @@ s = """
                                                                 
 """
 tree = Tree.from_tree_string(s)
+```
 
 A tree object will be built.
 
 2. Output string as a tree
+```
 print(tree.to_tree_string())
+```
+output:
+```
 how many not ar invoices have not been partially paid
+```
 
 3. Output stentence content
+```
 print(tree.content_string())
- 
+```
+output:
+```
 ROOT->
   SBAR->
     WHADJP->
       WRB=how
       JJ=many
-
     S->
       NP->
         RB=not
@@ -54,11 +64,11 @@ ROOT->
               RB=partially
 
             VBN=paid
-
+```
 
 Sample:
 ===
-    
+```    
 s = """
 (ROOT
   (SBAR
@@ -77,9 +87,10 @@ print(s)
 tree = Tree.from_tree_string(s)
 print(tree.content_string())
 print(tree.to_tree_string())
-
+```
 
 output:
+```
 (ROOT
   (SBAR
       (WHADJP (WRB how) (JJ many))
@@ -116,4 +127,4 @@ ROOT->
               RB=partially
 
             VBN=paid
-
+```
